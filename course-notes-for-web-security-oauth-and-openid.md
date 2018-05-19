@@ -64,31 +64,31 @@ Based on OAuth clients and the grant types \(or flows\) they provide. Only provi
 
 * No other endpoints are defines - everything else is handled by an extension
 
-**Token Revocation \(RFC 7009\)**
+### **Token Revocation \(RFC 7009\)**
 
 * /revoke
 
   > Endpoint which applications use to deactivate \(invalidate\) a token Valid for access or refresh tokens
 
-**Token Introspection \(RFC 7662\)**
+### **Token Introspection \(RFC 7662\)**
 
 * /introspect
 
   > Endpoint which applications use to learn more about a token Checks whether token is active or not, taking into consideration the expiration date Optional fields: expiration time, scopes included, issued to client\_id, etc
 
-**Dynamic Client Registration**
+### **Dynamic Client Registration**
 
 * /register
 
   > Endpoint applications use to create new OAuth clients \(client\_id and client\_secret\) for provisioning new applications or users Introduces concept of "metadata discover documents"
 
-**OpenID Connect Core \(number of different specs included\)**
+### **OpenID Connect Core \(number of different specs included\)**
 
 * /userinfo
 
   > Endpoint applications use to retrieve profile info for authenticated user Returns a spec-defined set of fields, which depend on the permissions \(scope\) requested
 
-**Server Discovery \(a Working Draft\)**
+### **Server Discovery \(a Working Draft\)**
 
 * /.well-known/openid-configuration
 
@@ -116,10 +116,10 @@ Based on OAuth clients and the grant types \(or flows\) they provide. Only provi
 > * Tokens represent specific scopes and durations of access, granted by the resource owner, and enforced by the resource server and authorization server.  
 > * The access token provides an abstraction layer, replacing different authorzation constructs \(e.g., username and password\) with a single token understood by the resource server.
 > * Access tokens can have different formats, structures, and methods of utilization \(e.g., cryptographic properties\) based on the resource server security requirements.
->
->   **JSON Web Token \(JWT\) RFC 7519**
->
->   Defines the Claims:
+
+### **JSON Web Token \(JWT\) RFC 7519**
+
+Defines the Claims:
 
 * "iss": the issuer of the token, an entity we trust
 * "sub": the subject \(user\) of the token
@@ -127,7 +127,7 @@ Based on OAuth clients and the grant types \(or flows\) they provide. Only provi
 * "exp": expiration time of the token \(for high security situation, short \(few minutes\); for low security, can be weeks or months\)
 * Additional fields...
 
-**Token Revocation \(RFC 7009\)**
+### **Token Revocation \(RFC 7009\)**
 
 Note that when a access or refresh token is revoked, there is no requirement for revokation to be broadcast to applications or APIs.  It is up to the application or API to check the revoke status of the token.
 
@@ -250,7 +250,7 @@ Security Considerations:
 * All resource servers must validate the access tokens.
 * Impersonation problem.  May 2017 "Google Docs Worm" - disguised itself as Google and asked for permissions via the normal OAuth authorization flow.  This was 100% human behaviour, not a flaw in OAuth.
 
-## Resource Owner Password Flow \(For Legacy Situations\)
+### Resource Owner Password Flow \(For Legacy Situations\)
 
 See Okta's [Resource Owner Password Flow](https://developer.okta.com/authentication-guide/auth-overview/#resource-owner-password-flow) for description and diagram. See [Implementing the Resource Owner Password Flow](https://developer.okta.com/authentication-guide/implementing-authentication/password) for details.
 
