@@ -220,7 +220,26 @@ Creating the Authorization Code url is complex, so use a well-established librar
 Postman Example: 
 
 1.  Google OAuth app info: 
-   1. Goto [Google - Obtaining OAuth 2.0 access tokens](https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps#obtainingaccesstokens) - look for HTTP/REST in document \(or https://\) 1. Auth url: [https://accounts.google.com/o/oauth2/v2/auth](https://accounts.google.com/o/oauth2/v2/auth) 2. Access Token url: [https://www.googleapis.com/oauth2/v4/token](https://www.googleapis.com/oauth2/v4/token) 3. Scope: go to [Google - youtube auth guide](https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps) and look for 'Identify access scopes', pick the readonly scope 2. Goto [Google API Console](https://console.developers.google.com/apis/dashboard?project=diesel-talon-203720&folder&organizationId&duration=PT1H) select 'Credentials' then click on a target OAuth client id \(or create one if needed\): 1. Client Id and Client Secret are listed \(DON'T share Client Secret!!\) 2. 'Callback url' must be added to the 'Authorized redirect URIs' white list 2. Create Postman request: 1. Create a 'GET' request 2. On 'Authorization' tab, select 'OAuth 2.0' 3. Click 'Get New Access Token': 1. Enter a token name: Youtube Token 2. Callbak URL: [https://www.getpostman.com/oauth2/callback](https://www.getpostman.com/oauth2/callback) \(must be whitelisted for google OAuth credential\) 3. Auth URL: [https://accounts.google.com/o/oauth2/v2/auth](https://accounts.google.com/o/oauth2/v2/auth) \(from step 1 above\) 4. Access Token URL: [https://www.googleapis.com/oauth2/v4/token](https://www.googleapis.com/oauth2/v4/token) \(from step 1 above\) 5. Client ID: enter client id from step 1 above 6. Client secret: enter client id from step 1 above 7. Scope: [https://www.googleapis.com/auth/youtube.readonly](https://www.googleapis.com/auth/youtube.readonly) 3. Run the Postman request - this should pop-up a google login dialogue. Login with Google credentials. Note that the 3rd party app \(Postman in the case\) does not have access to these credentials - this is all Google provided. 4. A postman dialogue showing the 'Access Token' should appear. Can look at token at [https://www.jsonwebtoken.io/](https://www.jsonwebtoken.io/). Not much useful info here.
+   1. Goto [Google - Obtaining OAuth 2.0 access tokens](https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps#obtainingaccesstokens) - look for HTTP/REST in document \(or https://\)
+      1. Auth url: [https://accounts.google.com/o/oauth2/v2/auth](https://accounts.google.com/o/oauth2/v2/auth)
+      2. Access Token url: [https://www.googleapis.com/oauth2/v4/token](https://www.googleapis.com/oauth2/v4/token)
+   2. Scope: go to [Google - youtube auth guide](https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps) and look for 'Identify access scopes', pick the readonly scope
+   3. Goto [Google API Console](https://console.developers.google.com/apis/dashboard?project=diesel-talon-203720&folder&organizationId&duration=PT1H) select 'Credentials' then click on a target OAuth client id \(or create one if needed\):
+      1. Client Id and Client Secret are listed \(DON'T share Client Secret!!\)
+      2. 'Callback url' must be added to the 'Authorized redirect URIs' white list
+2. Create Postman request:
+   1. Create a 'GET' request
+   2. On 'Authorization' tab, select 'OAuth 2.0'
+   3. Click 'Get New Access Token':
+      1. Enter a token name: Youtube Token
+      2. Callbak URL: [https://www.getpostman.com/oauth2/callback](https://www.getpostman.com/oauth2/callback) \(must be whitelisted for google OAuth credential\)
+      3. Auth URL: [https://accounts.google.com/o/oauth2/v2/auth](https://accounts.google.com/o/oauth2/v2/auth) \(from step 1 above\)
+      4. Access Token URL: [https://www.googleapis.com/oauth2/v4/token](https://www.googleapis.com/oauth2/v4/token) \(from step 1 above\)
+      5. Client ID: enter client id from step 1 above
+      6. Client secret: enter client id from step 1 above
+      7. Scope: [https://www.googleapis.com/auth/youtube.readonly](https://www.googleapis.com/auth/youtube.readonly) 
+3. Run the Postman request - this should pop-up a google login dialogue. Login with Google credentials. Note that the 3rd party app \(Postman in the case\) does not have access to these credentials - this is all Google provided.
+4. A postman dialogue showing the 'Access Token' should appear. Can look at token at [https://www.jsonwebtoken.io/](https://www.jsonwebtoken.io/). Not much useful info here.
 
 Security Considerations:
 
