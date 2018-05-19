@@ -17,5 +17,5 @@ description: Sample application written in Angular using Okta OAuth/OpenID Conne
     * [Github Node.js Example: sample-nodejs-express-4](https://github.com/okta/samples-nodejs-express-4/)
     
 ## Example
-[Github sample app](https://github.com/kozigh01/okta-angular-example)
+Github sample app: [Code](https://github.com/kozigh01/okta-angular-example)
 
