@@ -14,13 +14,9 @@
 * [Getting Started](https://developer.okta.com/docs/api/getting_started/api_test_client)
 * [Auth Overview](https://developer.okta.com/authentication-guide/auth-overview/)
 * [Okta - Angular](https://developer.okta.com/code/angular/) \| [Sample Angular Apps](https://github.com/okta/samples-js-angular)
-* [Admin Dashboard](https://dev-489531-admin.oktapreview.com/admin/dashboard)
-
-{% hint style="info" %}
-* User name: [mkozi.okta01@gmail.com](mailto:mkozi.okta01@gmail.com)
-* Company: mkoziokta
-{% endhint %}
-
+* [Admin Dashboard](https://dev-489531-admin.oktapreview.com/admin/dashboard):
+  * User name: [mkozi.okta01@gmail.com](mailto:mkozi.okta01@gmail.com)
+  * Company: mkoziokta
 * [Example: Okta Client Credential Flow](https://gist.github.com/kozigh01/8728f5c855ad9b4e3f9c9ee08371e34c#file-client-credentials-flow-md)
 
 If new account is required: from [Okta Developer Page](https://developer.okta.com/), click "sign up" button and create a free developer okta account, I created:
